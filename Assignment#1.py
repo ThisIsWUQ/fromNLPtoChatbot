@@ -83,6 +83,8 @@ new_grammar = tracery.Grammar(script)
 for i in range(1):
     print(new_grammar.flatten("#dialogue#"))
 
+print("-----")
+
 # bonus
 
 # format: a conversation between two philosophers in Zhuangzhi's The Floods of Autumn
