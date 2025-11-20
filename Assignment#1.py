@@ -49,6 +49,8 @@ grammar = tracery.Grammar(rules)
 for i in range(10):
     print(grammar.flatten("#origin#"))
 
+print("-----")
+
 # bonus
 
 # format: a dialogue Plato's the Symposium https://www.gutenberg.org/files/1600/1600-h/1600-h.htm
