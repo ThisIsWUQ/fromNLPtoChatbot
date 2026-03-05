@@ -1,8 +1,0 @@
-streamlit
-numpy
-random
-tracery
-spacy
-markovify
-transformers
-st_copy
