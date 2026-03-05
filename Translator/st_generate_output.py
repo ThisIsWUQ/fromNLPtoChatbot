@@ -12,7 +12,7 @@ from transformers import pipeline
 import path
 
 dir = path.Path(__file__).abspath()
-sys.append.path(dir.parent.parent)
+sys.path.append(dir.parent.parent)
 
 # Set up working vocabularies
 
@@ -613,5 +613,6 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
