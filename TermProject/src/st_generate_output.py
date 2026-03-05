@@ -527,10 +527,10 @@ def st_generate_output_text(user_input, mode):
     output = "Generation failed."
 
     themes = extract_themes(user_input)
-    print(themes)
+    st.write(themes)
     emotions = extract_emotions(user_input)
-    print(emotions)
-    print(emotions[0])
+    st.write(emotions)
+    st.write(emotions[0])
 
     # detect if the themes are food-heavy-loaded or space-heavy-loaded
     density_food = sum(1 for t in themes if t in food_vocab + flavor_vocab) / len(themes)
@@ -551,9 +551,9 @@ def st_generate_output_text(user_input, mode):
     # translate and generate an output text of the domain
     if mode == "Culinary":
         food_mapped = map_theme_to_content(themes, food_vocab)
-        print(food_mapped)
+        st.write(food_mapped)
         flavor_mapped = map_emotion_to_sense(emotions, themes, flavor_vocab)
-        print(flavor_mapped)
+        st.write(flavor_mapped)
 
         description_food = generate_narration_food(food_mapped, flavor_mapped)
 
@@ -579,11 +579,11 @@ def st_generate_output_text(user_input, mode):
 
     else:
         bridge_mapped = map_theme_to_content(themes, bridge_vocab) # semantic bridge
-        print(bridge_mapped)
+        st.write(bridge_mapped)
         furniture_mapped = map_theme_to_content(bridge_mapped, furniture_vocab)
-        print(furniture_mapped)
+        st.write(furniture_mapped)
         atmosphere_mapped = map_emotion_to_sense(emotions, bridge_mapped, atmosphere_vocab)
-        print(atmosphere_mapped)
+        st.write(atmosphere_mapped)
 
         description_home = generate_narration_home(furniture_mapped, atmosphere_mapped)
 
@@ -609,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
