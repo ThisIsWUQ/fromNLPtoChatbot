@@ -76,7 +76,7 @@ with open("TermProject/data/house_interior_surprise.txt", "r", encoding="utf-8")
 
 # Load an English language package
 
-nlp = spacy.load('en_core_web_sm')
+nlp = spacy.load('en_core_web_md')
 
 # Load an emotion classifier model for English texts
 
@@ -609,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
