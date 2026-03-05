@@ -2,3 +2,5 @@ tracery
 spacy
 markovify
 transformer
+st_generate_output
+st_copy
