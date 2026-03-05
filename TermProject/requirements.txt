@@ -2,4 +2,5 @@ numpy
 tracery
 spacy
 markovify
+transformers
 st_copy
