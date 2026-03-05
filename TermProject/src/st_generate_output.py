@@ -4,7 +4,7 @@ import streamlit as st
 import numpy as np
 import random
 import tracery
-import spacy.cli
+import spacy
 import en_core_web_lg
 import markovify
 from spacy.lang.en.stop_words import STOP_WORDS
@@ -14,8 +14,7 @@ from transformers import pipeline
 # Load an English language package
 
 @st.cache_resource
-spacy.cli.download("en_core_web_lg")
-nlp = spacy.load("en_core_web_lg")
+nlp = en_core_web_lg.load()
 
 # Set up working vocabularies
 
@@ -612,6 +611,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
