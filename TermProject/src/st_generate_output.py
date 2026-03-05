@@ -1,5 +1,7 @@
 import sys
 !{sys.executable} -m pip install setuptools wheel
+!{sys.executable} -m pip install spacy
+!{sys.executable} -m spacy download en_core_web_lg
 
 # Generate an output text given the user's input
 
@@ -614,6 +616,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
