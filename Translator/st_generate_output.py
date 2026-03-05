@@ -80,7 +80,11 @@ with open(BASE_DIR / "house_interior_surprise.txt", "r", encoding="utf-8") as f:
 
 # Load an English language package
 
-nlp = spacy.load('en_core_web_lg')
+try:
+    nlp = spacy.load("en_core_web_lg")
+except:
+    subprocess.run([sys.executable, "-m", "spacy", "download", "en_core_web_lg"])
+    nlp = spacy.load("en_core_web_lg")
 
 # Load an emotion classifier model for English texts
 
@@ -613,6 +617,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
