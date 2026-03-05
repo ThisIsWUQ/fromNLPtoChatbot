@@ -14,10 +14,7 @@ from transformers import pipeline
 # Load an English language package
 
 @st.cache_resource
-def load_nlp():
-    return spacy.load("en_core_web_lg")
-
-nlp = load_nlp()
+nlp = en_core_web_lg.load()
 
 # Set up working vocabularies
 
@@ -614,6 +611,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
