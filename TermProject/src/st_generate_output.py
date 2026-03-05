@@ -1,3 +1,6 @@
+import sys
+!{sys.executable} -m pip install setuptools wheel
+
 # Generate an output text given the user's input
 
 import streamlit as st
@@ -611,6 +614,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
