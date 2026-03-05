@@ -80,7 +80,6 @@ nlp = spacy.load('en_core_web_lg')
 
 # Load an emotion classifier model for English texts
 
-@st.cache_resource
 emotion_classifier = pipeline(
     "text-classification",
     model="j-hartmann/emotion-english-distilroberta-base",
@@ -610,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
