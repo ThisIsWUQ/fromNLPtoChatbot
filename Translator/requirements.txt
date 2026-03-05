@@ -2,4 +2,5 @@ tracery
 spacy
 markovify
 transformer
-st_copy
+spacy.lang.en.stop_words
+tracery.modifiers
