@@ -12,7 +12,7 @@ from transformers import pipeline
 
 # Set up working vocabularies
 
-with open("food_word_list.txt", "r", encoding="utf-8") as f:
+with open("food_word_list.txt") as f:
     food_text = f.read()
 food_vocab = food_text.split(" ")
 
@@ -606,5 +606,6 @@ def st_generate_output_text(user_input, mode):
             corpus_text_home = corpus_text_home_neutral # use the neutral corpus as the default
 
         output = generate_output_text(description_home, corpus_text_home, furniture_mapped, atmosphere_mapped, k=num_sentence+round(num_sentence/0.5))
+
 
     return output
