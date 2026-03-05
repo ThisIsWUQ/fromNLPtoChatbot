@@ -5,7 +5,6 @@ import numpy as np
 import random
 import tracery
 import spacy
-#import en_core_web_lg
 import markovify
 from spacy.lang.en.stop_words import STOP_WORDS
 from tracery.modifiers import base_english
@@ -85,7 +84,6 @@ emotion_classifier = pipeline(
     "text-classification",
     model="j-hartmann/emotion-english-distilroberta-base",
     top_k=None
-    #return_all_scores=True
 )
 
 def extract_emotions(text, threshold=0.05):
@@ -611,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
