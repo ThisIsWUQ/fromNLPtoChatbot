@@ -1,5 +1,7 @@
 # Generate an output text given the user's input
 
+import sys
+import os
 import streamlit as st
 import numpy as np
 import random
@@ -606,5 +608,6 @@ def st_generate_output_text(user_input, mode):
             corpus_text_home = corpus_text_home_neutral # use the neutral corpus as the default
 
         output = generate_output_text(description_home, corpus_text_home, furniture_mapped, atmosphere_mapped, k=num_sentence+round(num_sentence/0.5))
+
 
     return output
