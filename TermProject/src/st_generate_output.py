@@ -5,7 +5,7 @@ import numpy as np
 import random
 import tracery
 import spacy
-import en_core_web_lg
+#import en_core_web_lg
 import markovify
 from spacy.lang.en.stop_words import STOP_WORDS
 from tracery.modifiers import base_english
@@ -611,6 +611,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
