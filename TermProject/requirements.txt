@@ -1,6 +1,4 @@
-streamlit
 numpy
-random
 tracery
 spacy
 markovify
