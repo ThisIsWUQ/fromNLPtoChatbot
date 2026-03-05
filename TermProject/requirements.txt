@@ -1,6 +1,6 @@
 numpy
 tracery
-spacy
+spacy==3.7.4
 markovify
 transformers
 st_copy
