@@ -20,62 +20,62 @@ with open(BASE_DIR / "food_word_list.txt", "r", encoding="utf-8") as f:
     food_text = f.read()
 food_vocab = food_text.split(" ")
 
-with open("../flavor_word_list.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "flavor_word_list.txt", "r", encoding="utf-8") as f:
     flavor_text = f.read()
 flavor_vocab = flavor_text.split(" ")
 
-with open("food_sensory_neutral.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_neutral.txt", "r", encoding="utf-8") as f:
     corpus_text_food_neutral = f.read()
 
-with open("food_sensory_anger.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_anger.txt", "r", encoding="utf-8") as f:
     corpus_text_food_anger = f.read()
 
-with open("food_sensory_disgust.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_disgust.txt", "r", encoding="utf-8") as f:
     corpus_text_food_disgust = f.read()
 
-with open("food_sensory_fear.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_fear.txt", "r", encoding="utf-8") as f:
     corpus_text_food_fear = f.read()
 
-with open("food_sensory_joy.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_joy.txt", "r", encoding="utf-8") as f:
     corpus_text_food_joy = f.read()
 
-with open("food_sensory_sadness.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_sadness.txt", "r", encoding="utf-8") as f:
     corpus_text_food_sadness = f.read()
 
-with open("food_sensory_surprise.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "food_sensory_surprise.txt", "r", encoding="utf-8") as f:
     corpus_text_food_surprise = f.read()
 
-with open("abstract_bridge_word_list.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "abstract_bridge_word_list.txt", "r", encoding="utf-8") as f:
     bridge_text = f.read()
 bridge_vocab = bridge_text.split(" ")
 
-with open("home_object_word_list.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "home_object_word_list.txt", "r", encoding="utf-8") as f:
     furniture_text = f.read()
 furniture_vocab = furniture_text.split(" ")
 
-with open("atmosphere_word_list.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "atmosphere_word_list.txt", "r", encoding="utf-8") as f:
     atmosphere_text = f.read()
 atmosphere_vocab = atmosphere_text.split(" ")
 
-with open("house_interior_neutral.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_neutral.txt", "r", encoding="utf-8") as f:
     corpus_text_home_neutral = f.read()
 
-with open("house_interior_anger.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_anger.txt", "r", encoding="utf-8") as f:
     corpus_text_home_anger = f.read()
 
-with open("house_interior_disgust.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_disgust.txt", "r", encoding="utf-8") as f:
     corpus_text_home_disgust = f.read()
 
-with open("house_interior_fear.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_fear.txt", "r", encoding="utf-8") as f:
     corpus_text_home_fear = f.read()
 
-with open("house_interior_joy.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_joy.txt", "r", encoding="utf-8") as f:
     corpus_text_home_joy = f.read()
 
-with open("house_interior_sadness.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_sadness.txt", "r", encoding="utf-8") as f:
     corpus_text_home_sadness = f.read()
 
-with open("house_interior_surprise.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR / "house_interior_surprise.txt", "r", encoding="utf-8") as f:
     corpus_text_home_surprise = f.read()
 
 # Load an English language package
@@ -613,6 +613,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
