@@ -83,28 +83,14 @@ nlp = spacy.load('en_core_web_lg')
 emotion_classifier = pipeline(
     "text-classification",
     model="j-hartmann/emotion-english-distilroberta-base",
-    return_all_scores=True
-    #top_k=None
+    top_k=None
 )
 
 def extract_emotions(text, threshold=0.05):
     """
     Extract emotions in a given text using the emotion classifier
     """
-    out = emotion_classifier(text)
-
-    # Case A: output is [[{label, score}, ...]]
-    if isinstance(out, list) and out and isinstance(out[0], list):
-        results = out[0]
-
-    # Case B: output is [{label, score}, ...] or [{label, score}]
-    elif isinstance(out, list) and out and isinstance(out[0], dict):
-        results = out
-
-    else:
-        # Unexpected shape (e.g., string labels). Return empty or handle gracefully.
-        return []
-    #results = emotion_classifier(text)[0]
+    results = emotion_classifier(text)[0]
     results = sorted(results, key=lambda x: x["score"], reverse=True) # sort results by score (descending)
     emotions = [r["label"] for r in results if r["score"] > threshold]
 
@@ -623,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
