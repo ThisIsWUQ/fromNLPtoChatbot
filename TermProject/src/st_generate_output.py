@@ -1,7 +1,5 @@
 # Generate an output text given the user's input
 
-import sys
-import os
 import streamlit as st
 import numpy as np
 import random
@@ -611,3 +609,4 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
