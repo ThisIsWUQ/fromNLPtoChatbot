@@ -1,0 +1,11 @@
+streamlit
+numpy
+random
+tracery
+spacy
+markovify
+transformers
+spacy.lang.en.stop_words
+tracery.modifiers
+src.st_generate_output
+st_copy
