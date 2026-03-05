@@ -9,9 +9,6 @@ import markovify
 from spacy.lang.en.stop_words import STOP_WORDS
 from tracery.modifiers import base_english
 from transformers import pipeline
-#from pathlib import Path
-
-#BASE_DIR = Path(__file__).resolve().parent
 
 # Set up working vocabularies
 
@@ -19,62 +16,62 @@ with open("TermProject/data/food_word_list.txt", "r", encoding="utf-8") as f:
     food_text = f.read()
 food_vocab = food_text.split(" ")
 
-with open(BASE_DIR / "data/flavor_word_list.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/flavor_word_list.txt", "r", encoding="utf-8") as f:
     flavor_text = f.read()
 flavor_vocab = flavor_text.split(" ")
 
-with open(BASE_DIR / "data/food_sensory_neutral.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_neutral.txt", "r", encoding="utf-8") as f:
     corpus_text_food_neutral = f.read()
 
-with open(BASE_DIR / "data/food_sensory_anger.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_anger.txt", "r", encoding="utf-8") as f:
     corpus_text_food_anger = f.read()
 
-with open(BASE_DIR / "data/food_sensory_disgust.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_disgust.txt", "r", encoding="utf-8") as f:
     corpus_text_food_disgust = f.read()
 
-with open(BASE_DIR / "data/food_sensory_fear.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_fear.txt", "r", encoding="utf-8") as f:
     corpus_text_food_fear = f.read()
 
-with open(BASE_DIR / "data/food_sensory_joy.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_joy.txt", "r", encoding="utf-8") as f:
     corpus_text_food_joy = f.read()
 
-with open(BASE_DIR / "data/food_sensory_sadness.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_sadness.txt", "r", encoding="utf-8") as f:
     corpus_text_food_sadness = f.read()
 
-with open(BASE_DIR / "data/food_sensory_surprise.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/food_sensory_surprise.txt", "r", encoding="utf-8") as f:
     corpus_text_food_surprise = f.read()
 
-with open(BASE_DIR / "data/abstract_bridge_word_list.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/abstract_bridge_word_list.txt", "r", encoding="utf-8") as f:
     bridge_text = f.read()
 bridge_vocab = bridge_text.split(" ")
 
-with open(BASE_DIR / "data/home_object_word_list.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/home_object_word_list.txt", "r", encoding="utf-8") as f:
     furniture_text = f.read()
 furniture_vocab = furniture_text.split(" ")
 
-with open(BASE_DIR / "data/atmosphere_word_list.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/atmosphere_word_list.txt", "r", encoding="utf-8") as f:
     atmosphere_text = f.read()
 atmosphere_vocab = atmosphere_text.split(" ")
 
-with open(BASE_DIR / "data/house_interior_neutral.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_neutral.txt", "r", encoding="utf-8") as f:
     corpus_text_home_neutral = f.read()
 
-with open(BASE_DIR / "data/house_interior_anger.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_anger.txt", "r", encoding="utf-8") as f:
     corpus_text_home_anger = f.read()
 
-with open(BASE_DIR / "data/house_interior_disgust.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_disgust.txt", "r", encoding="utf-8") as f:
     corpus_text_home_disgust = f.read()
 
-with open(BASE_DIR / "data/house_interior_fear.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_fear.txt", "r", encoding="utf-8") as f:
     corpus_text_home_fear = f.read()
 
-with open(BASE_DIR / "data/house_interior_joy.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_joy.txt", "r", encoding="utf-8") as f:
     corpus_text_home_joy = f.read()
 
-with open(BASE_DIR / "data/house_interior_sadness.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_sadness.txt", "r", encoding="utf-8") as f:
     corpus_text_home_sadness = f.read()
 
-with open(BASE_DIR / "data/house_interior_surprise.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/house_interior_surprise.txt", "r", encoding="utf-8") as f:
     corpus_text_home_surprise = f.read()
 
 # Load an English language package
@@ -161,7 +158,7 @@ def nearest_neighbors(target, vocab, k=10, tolerance=0.000001, random_pick=True)
     else:
         return close_matches
 
-with open(BASE_DIR / "data/google-10000-english-no-swears.txt", "r", encoding="utf-8") as f:
+with open("TermProject/data/google-10000-english-no-swears.txt", "r", encoding="utf-8") as f:
     common_text = f.read()
 common_words = common_text.split("\n")
 
@@ -612,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
