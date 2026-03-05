@@ -14,7 +14,7 @@ from transformers import pipeline
 # Load an English language package
 
 @st.cache_resource
-nlp = en_core_web_lg.load()
+n = en_core_web_lg.load()
 
 # Set up working vocabularies
 
@@ -611,6 +611,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
