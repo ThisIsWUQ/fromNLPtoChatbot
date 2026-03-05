@@ -9,10 +9,6 @@ import markovify
 from spacy.lang.en.stop_words import STOP_WORDS
 from tracery.modifiers import base_english
 from transformers import pipeline
-import path
-
-dir = path.Path(__file__).abspath()
-sys.path.append(dir.parent.parent)
 
 # Set up working vocabularies
 
@@ -613,6 +609,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
