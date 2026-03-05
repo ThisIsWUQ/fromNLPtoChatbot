@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 # Set up working vocabularies
 
-with open(BASE_DIR / "data/food_word_list.txt", "r", encoding="utf-8") as f:
+with open(BASE_DIR\"data\food_word_list.txt", "r", encoding="utf-8") as f:
     food_text = f.read()
 food_vocab = food_text.split(" ")
 
@@ -612,5 +612,6 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
