@@ -4,17 +4,12 @@ import streamlit as st
 import numpy as np
 import random
 import tracery
-#import spacy
+import spacy
 import en_core_web_lg
 import markovify
 from spacy.lang.en.stop_words import STOP_WORDS
 from tracery.modifiers import base_english
 from transformers import pipeline
-
-# Load an English language package
-
-@st.cache_resource
-nlp = en_core_web_lg.load()
 
 # Set up working vocabularies
 
@@ -79,6 +74,11 @@ with open("TermProject/data/house_interior_sadness.txt", "r", encoding="utf-8") 
 
 with open("TermProject/data/house_interior_surprise.txt", "r", encoding="utf-8") as f:
     corpus_text_home_surprise = f.read()
+
+# Load an English language package
+
+@st.cache_resource
+nlp = en_core_web_lg.load()
 
 # Load an emotion classifier model for English texts
 
@@ -611,6 +611,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
