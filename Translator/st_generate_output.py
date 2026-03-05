@@ -20,7 +20,7 @@ with open(BASE_DIR / "food_word_list.txt", "r", encoding="utf-8") as f:
     food_text = f.read()
 food_vocab = food_text.split(" ")
 
-with open("flavor_word_list.txt", "r", encoding="utf-8") as f:
+with open("../flavor_word_list.txt", "r", encoding="utf-8") as f:
     flavor_text = f.read()
 flavor_vocab = flavor_text.split(" ")
 
@@ -613,6 +613,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
