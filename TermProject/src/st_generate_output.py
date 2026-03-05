@@ -83,7 +83,8 @@ nlp = spacy.load('en_core_web_lg')
 emotion_classifier = pipeline(
     "text-classification",
     model="j-hartmann/emotion-english-distilroberta-base",
-    top_k=None
+    return_all_scores=True
+    #top_k=None
 )
 
 def extract_emotions(text, threshold=0.05):
@@ -609,6 +610,7 @@ def st_generate_output_text(user_input, mode):
 
 
     return output
+
 
 
 
